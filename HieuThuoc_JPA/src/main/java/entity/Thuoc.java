@@ -7,16 +7,15 @@ import lombok.ToString;
 
 import java.util.Set;
 
-
 @Setter
 @Getter
 @ToString
 @Entity
-@Table(name = "thuoc")
+@Table(name = "Thuoc")
 public class Thuoc {
     @Id
+    @Column(name = "thuoc_id",columnDefinition = "varchar(45)", nullable = false, unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "thuoc_id", nullable = false, unique = true)
     private String id;
 
     @Column(columnDefinition = "varchar(45)", unique = true, nullable = false)

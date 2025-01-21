@@ -11,12 +11,12 @@ import java.util.Set;
 @Getter
 @ToString
 @Entity
-@Table(name = "danh_muc")
+@Table(name = "DanhMuc")
 public class DanhMuc {
 
     @Id
+    @Column(name = "danhMuc_id",columnDefinition = "varchar(45)", nullable = false, unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "danhMuc_id", nullable = false, unique = true)
     private String id;
 
     @Column(columnDefinition = "varchar(45)", unique = true, nullable = false)
