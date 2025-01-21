@@ -19,26 +19,14 @@ public class HeloWorld {
         EntityManager em = Persistence.createEntityManagerFactory("mariadb-pu")
                 .createEntityManager();
 
-
         Faker faker = new Faker();
         EntityTransaction tr = em.getTransaction();
-        Random rd= new Random();
+        Random rd = new Random();
 
-        for(int i=0;i<10;i++){
-            Thuoc thuoc = new Thuoc();
-            thuoc.setId(faker.number().digits(20));
-            thuoc.setTen(faker.commerce().productName());
-            thuoc.setDonViTinh(faker.commerce().material());
-            thuoc.setThanhPhan(faker.commerce().department());
-            thuoc.setSoLuongTon(faker.number().numberBetween(1, 100));
-            thuoc.setHinhAnh(new byte[0]);
 
-            tr.begin();
-            em.merge(thuoc);
-            tr.commit();
-        }
 
-        for(int i=0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
+            //them khuyenMai
             KhuyenMai khuyenMai = new KhuyenMai();
             khuyenMai.setId(faker.number().digits(20));
             khuyenMai.setTen(faker.commerce().productName());
@@ -46,51 +34,46 @@ public class HeloWorld {
             khuyenMai.setThoiGianBatDau(LocalDate.now().minusDays(faker.number().numberBetween(1, 30)));
             khuyenMai.setThoiGianKetThuc(LocalDate.now().plusDays(faker.number().numberBetween(1, 30)));
 
-
-            String thuocID = String.valueOf(rd.nextInt(100)+1);
-//            Thuoc thuoc;
-//            thuoc = em.createQuery("select t from Thuoc t", Thuoc.class).getResultList().get(rd.nextInt(10));
-//            khuyenMai.setThuoc(new HashSet<>(List.of(thuoc)));
-//            thuoc.setKhuyenMai(khuyenMai);
-//            tr.begin();
-//            em.persist(khuyenMai);
-//            tr.commit();
-
-
-            Thuoc thuoc = em.find(Thuoc.class, thuocID);
-            khuyenMai.setThuoc(new HashSet<>(List.of(thuoc)));
-
             tr.begin();
-            em.merge(khuyenMai);
+            em.persist(khuyenMai);
             tr.commit();
-        }
 
-        for(int i=0;i<10;i++){
+            //them nhaSanXuat
             NhaSanXuat nhaSanXuat = new NhaSanXuat();
             nhaSanXuat.setId(faker.number().digits(4));
             nhaSanXuat.setTen(faker.company().name());
 
-//            String thuocID = String.valueOf(rd.nextInt(100)+1);
-//            Thuoc thuoc = em.find(Thuoc.class,thuocID );
-//            nhaSanXuat.setThuoc(new HashSet<>(List.of(thuoc)));
             tr.begin();
             em.persist(nhaSanXuat);
             tr.commit();
-        }
 
-        for(int i=0;i<10;i++){
+            //them danhMuc
             DanhMuc danhMuc = new DanhMuc();
             danhMuc.setId(faker.number().digits(4));
             danhMuc.setTen(faker.commerce().department());
             danhMuc.setViTriKe(faker.address().streetName());
 
-//            String thuocID = String.valueOf(rd.nextInt(100)+1);
-//            Thuoc thuoc = em.find(Thuoc.class,thuocID );
-//            danhMuc.setThuoc(new HashSet<>(List.of(thuoc)));
             tr.begin();
             em.persist(danhMuc);
+            tr.commit();
+
+            //them Thuoc
+            Thuoc thuoc = new Thuoc();
+            thuoc.setId(faker.number().digits(20));
+            thuoc.setTen(faker.commerce().productName());
+            thuoc.setDonViTinh(faker.commerce().material());
+            thuoc.setThanhPhan(faker.commerce().department());
+            thuoc.setSoLuongTon(faker.number().numberBetween(1, 100));
+            thuoc.setHinhAnh(new byte[0]);
+            thuoc.setKhuyenMai(khuyenMai);
+            thuoc.setDanhMuc(danhMuc);
+            thuoc.setNhaSanXuat(nhaSanXuat);
+
+            tr.begin();
+            em.persist(thuoc);
             tr.commit();
         }
 
     }
 }
+

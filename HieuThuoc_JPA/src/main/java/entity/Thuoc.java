@@ -14,39 +14,37 @@ import java.util.Set;
 @Table(name = "Thuoc")
 public class Thuoc {
     @Id
-    @Column(name = "thuoc_id",columnDefinition = "varchar(45)", nullable = false, unique = true)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ma_thuoc",columnDefinition = "varchar(45)")
     private String id;
 
-    @Column(columnDefinition = "varchar(45)", unique = true, nullable = false)
+    @Column(columnDefinition = "varchar(45)",name = "ten_thuoc",  nullable = false)
     private String ten;
 
-    @Column(columnDefinition = "varchar(45)",nullable = false)
+    @Column(columnDefinition = "varchar(45)",name = "don_vi_tinh",nullable = false)
     private String donViTinh;
 
-    @Column(columnDefinition = "varchar(45)",nullable = false)
+    @Column(columnDefinition = "varchar(45)",name = "thanh_phan",nullable = false)
     private String thanhPhan;
 
-
-    @Column(columnDefinition = "INT", nullable = false)
+    @Column(columnDefinition = "INT",name = "so_luong_ton", nullable = false)
     private int soLuongTon;
 
-    @Column(columnDefinition = "LONGBLOB")
+    @Column(columnDefinition = "LONGBLOB",name = "hinh_anh")
     private byte[] hinhAnh;
 
     @ToString.Exclude
     @ManyToOne
-    @JoinColumn(name = "nhaSanXuat_id", nullable = false)
+    @JoinColumn(name = "ma_nha_san_xuat")
     private NhaSanXuat nhaSanXuat;
 
     @ToString.Exclude
     @ManyToOne
-    @JoinColumn(name = "danhMuc_id", nullable = false)
+    @JoinColumn(name = "ma_danh_muc")
     private DanhMuc danhMuc;
 
     @ToString.Exclude
     @ManyToOne
-    @JoinColumn(name = "khuyenMai_id", nullable = false)
+    @JoinColumn(name = "ma_khuyen_mai")
     private KhuyenMai khuyenMai;
 
 

@@ -15,14 +15,13 @@ import java.util.Set;
 public class DanhMuc {
 
     @Id
-    @Column(name = "danhMuc_id",columnDefinition = "varchar(45)", nullable = false, unique = true)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ma_danh_muc",columnDefinition = "varchar(45)")
     private String id;
 
-    @Column(columnDefinition = "varchar(45)", unique = true, nullable = false)
+    @Column(columnDefinition = "varchar(45)",name = "ten_danh_muc", nullable = false)
     private String ten;
 
-    @Column(columnDefinition = "varchar(45)",nullable = false)
+    @Column(columnDefinition = "varchar(45)",name = "vi_tri_ke",nullable = false)
     private String viTriKe;
 
     @ToString.Exclude

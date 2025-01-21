@@ -16,10 +16,10 @@ import java.util.Set;
 public class NhaSanXuat {
 
     @Id
-    @Column(name = "nhaSanXuat_id",columnDefinition = "varchar(45)", nullable = false, unique = true)
+    @Column(name = "ma_nha_san_xuat",columnDefinition = "varchar(45)")
     private String id;
 
-    @Column(columnDefinition = "varchar(45)", unique = true, nullable = false)
+    @Column(columnDefinition = "varchar(45)",name = "ten_nha_san_xuat", nullable = false)
     private String ten;
 
     @ToString.Exclude
