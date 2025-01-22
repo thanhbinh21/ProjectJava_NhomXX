@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3338b9d2-b138-48fa-a46f-e04dd51f2461" name="Changes" comment="code final 22h30 22/1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HieuThuoc_JPA/src/main/java/model/HeloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/HieuThuoc_JPA/src/main/java/test/TestCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HieuThuoc_JPA/src/main/java/run/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/HieuThuoc_JPA/src/main/java/run/Runner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,20 +86,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.HeloWorld">
-    <configuration name="HeloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="model.HeloWorld" />
-      <module name="HieuThuoc_JPA.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TestCRUD">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Runner" />
       <module name="HieuThuoc_JPA.main" />
@@ -106,9 +94,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCRUD" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TestCRUD" />
+      <module name="HieuThuoc_JPA.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HeloWorld" />
+        <item itemvalue="Application.TestCRUD" />
         <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
@@ -133,7 +134,7 @@
       <workItem from="1737520814895" duration="3889000" />
       <workItem from="1737547003144" duration="142000" />
       <workItem from="1737547154366" duration="1433000" />
-      <workItem from="1737560073939" duration="4000" />
+      <workItem from="1737560073939" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="code_22/1">
       <option name="closed" value="true" />
@@ -159,7 +160,31 @@
       <option name="project" value="LOCAL" />
       <updated>1737559422225</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="code final 22h30 22/1">
+      <option name="closed" value="true" />
+      <created>1737560173909</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737560173909</updated>
+    </task>
+    <task id="LOCAL-00005" summary="code final 22h30 22/1">
+      <option name="closed" value="true" />
+      <created>1737560279949</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737560279949</updated>
+    </task>
+    <task id="LOCAL-00006" summary="code final 22h30 22/1">
+      <option name="closed" value="true" />
+      <created>1737560307247</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737560307247</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
