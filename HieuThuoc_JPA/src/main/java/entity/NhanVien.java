@@ -3,6 +3,7 @@ package entity;
 import jakarta.persistence.*;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -14,11 +15,13 @@ import java.util.Set;
 @Setter
 @Getter
 @ToString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "NhanVien")
 public class NhanVien {
     @Id
     @Column(name = "ma_nhan_vien",columnDefinition = "nvarchar(45)",nullable = false)
+    @EqualsAndHashCode.Include
     private String id;
     @Column(name = "ho_ten",columnDefinition = "nvarchar(100)",nullable = false)
     private String hoTen;

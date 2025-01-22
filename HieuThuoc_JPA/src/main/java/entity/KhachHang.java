@@ -1,6 +1,7 @@
 package entity;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -10,12 +11,14 @@ import java.util.Set;
 
 @Setter
 @Getter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 @Entity
 @Table(name = "KhachHang")
 public class KhachHang {
     @Id
     @Column(name = "ma_khach_hang", columnDefinition = "varchar(45)")
+    @EqualsAndHashCode.Include
     private String id;
     @Column(name = "ho_ten", nullable = false)
     private String hoTen;

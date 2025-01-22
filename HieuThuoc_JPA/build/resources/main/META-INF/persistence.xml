@@ -4,13 +4,22 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="mariadb-pu">
+        <class>entity.ChiTietHoaDon</class>
+        <class>entity.HoaDon</class>
+        <class>entity.NhaCungCap</class>
+        <class>entity.ChiTietPhieuNhapThuoc</class>
+        <class>entity.PhieuNhapThuoc</class>
+        <class>entity.VaiTro</class>
+        <class>entity.TaiKhoan</class>
         <class>entity.DanhMuc</class>
-        <class>entity.KhuyenMai</class>
         <class>entity.NhaSanXuat</class>
+        <class>entity.KhuyenMai</class>
+        <class>entity.PhieuDatThuoc</class>
+        <class>entity.NhanVien</class>
+        <class>entity.KhachHang</class>
         <class>entity.Thuoc</class>
-
+        <class>entity.ChiTietPhieuDatThuoc</class>
         <properties>
-
             <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
 
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/hieuthuocJPA" />
@@ -21,7 +30,12 @@
 
             <property name="jakarta.persistence.jdbc.dialect" value="org.hibernate.dialect.MariaDBDialect" />
 
-            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+
+            <property name="hibernate.format_sql" value="true" />
+
+<!--            <property name="hibernate.hbm2ddl.auto" value="update" />-->
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
         </properties>
 
     </persistence-unit>
