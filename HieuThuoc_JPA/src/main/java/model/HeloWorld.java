@@ -1,16 +1,14 @@
 package model;
 
 import dao.NhaSanXuatDAO;
-import entity.DanhMuc;
-import entity.KhuyenMai;
-import entity.NhaSanXuat;
-import entity.Thuoc;
+import entity.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import net.datafaker.Faker;
 import org.checkerframework.checker.units.qual.N;
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
@@ -21,16 +19,16 @@ public class HeloWorld {
         EntityManager em = Persistence.createEntityManagerFactory("mariadb-pu")
                 .createEntityManager();
 
-//        Faker faker = new Faker();
-//        EntityTransaction tr = em.getTransaction();
-//        Random rd = new Random();
-//
-//
-//
-//        for (int i = 0; i < 10; i++) {
-//            //them khuyenMai
+        Faker faker = new Faker();
+        EntityTransaction tr = em.getTransaction();
+        Random rd = new Random();
+
+
+
+        for (int i = 0; i < 10; i++) {
+            //them khuyenMai
 //            KhuyenMai khuyenMai = new KhuyenMai();
-//            khuyenMai.setId(faker.number().digits(20));
+//            khuyenMai.setId(faker.number().digits(20    ));
 //            khuyenMai.setTen(faker.commerce().productName());
 //            khuyenMai.setPhanTramGiamGia(faker.number().randomDouble(2, 5, 50));
 //            khuyenMai.setThoiGianBatDau(LocalDate.now().minusDays(faker.number().numberBetween(1, 30)));
@@ -72,9 +70,69 @@ public class HeloWorld {
 //            thuoc.setNhaSanXuat(nhaSanXuat);
 //
 //            tr.begin();
-//            em.persist(thuoc);//
+//            em.persist(thuoc);
 //            tr.commit();
-//        }
+
+            // Thêm VaiTro
+//            VaiTro vaiTro = new VaiTro();
+//            vaiTro.setId("VT" + faker.number().digits(2));
+//            String tenVaiTro = i % 2 == 0 ? "Nhân viên bán thuốc" : "Quản lý";
+//            vaiTro.setTenVaiTro(tenVaiTro);
+//
+//            tr.begin();
+//            em.persist(vaiTro);
+//            tr.commit();
+////            them TK
+//            TaiKhoan taiKhoan = new TaiKhoan();
+//            taiKhoan.setId("TK" + faker.number().digits(2));
+//            taiKhoan.setPassword(faker.internet().password(8, 12));
+//            NhanVien nhanVien = em.find(NhanVien.class, "NV" + i);
+//            taiKhoan.setNhanVien(nhanVien);
+////            VaiTro vaiTro = em.find(VaiTro.class, i % 2 == 0 ? "VT001" : "VT002");
+//            taiKhoan.setVaiTro(vaiTro);
+//
+//            tr.begin();
+//            em.persist(taiKhoan);
+//            tr.commit();
+
+            // Them NV
+//            NhanVien nhanVien = new NhanVien();
+//            nhanVien.setId("NV" + String.format("%03d", i + 1));
+//            nhanVien.setHoTen(faker.name().fullName());
+//            nhanVien.setGioiTinh(faker.bool().bool());
+//            nhanVien.setNamSinh(faker.number().numberBetween(2000, 2004));
+//            nhanVien.setNgayVaoLam(LocalDate.now().minusDays(faker.number().numberBetween(1, 365)));
+//            nhanVien.setHoaDons(new HashSet<>());
+//
+//            tr.begin();
+//            em.persist(nhanVien);
+//            tr.commit();
+
+            //Them KH
+//            KhachHang khachHang = new KhachHang();
+//            khachHang.setId("KH" + String.format("%03d", i + 1));
+//            khachHang.setHoTen(faker.name().fullName());
+//            khachHang.setSoDienThoai(faker.phoneNumber().phoneNumber());
+//            khachHang.setGioiTinh(faker.bool().bool());
+//            khachHang.setNgayThamGia(LocalDate.now().minusDays(faker.number().numberBetween(1, 365)));
+//            khachHang.setHoaDons(null);
+//            khachHang.setPhieuDatThuocs(null);
+//
+//            tr.begin();
+//            em.persist(khachHang);
+//            tr.commit();
+            //Them NCC
+//            NhaCungCap nhaCungCap = new NhaCungCap();
+//            nhaCungCap.setId("NCC" + String.format("%03d", i + 1));
+//            nhaCungCap.setTen(faker.company().name());
+//            nhaCungCap.setDiaChi(faker.address().streetAddress());
+//            nhaCungCap.setSdt(faker.phoneNumber().phoneNumber());
+//
+//            tr.begin();
+//            em.persist(nhaCungCap);
+//            tr.commit();
+
+        }
 //        NhaSanXuatDAO testCRUD = new NhaSanXuatDAO(em);
         // Create
 //        NhaSanXuat testCreate1 = new NhaSanXuat("12345","Test Create");
