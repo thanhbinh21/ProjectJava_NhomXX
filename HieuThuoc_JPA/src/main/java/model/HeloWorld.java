@@ -136,7 +136,6 @@ public class HeloWorld {
             em.persist(phieuDatThuoc);
             tr.commit();
         }
-
     }
 }
 
