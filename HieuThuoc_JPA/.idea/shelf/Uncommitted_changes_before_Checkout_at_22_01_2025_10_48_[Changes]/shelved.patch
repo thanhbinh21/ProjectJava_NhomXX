@@ -1,0 +1,33 @@
+Index: src/main/resources/META-INF/persistence.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<persistence xmlns=\"https://jakarta.ee/xml/ns/persistence\"\r\n             xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n             xsi:schemaLocation=\"https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd\"\r\n             version=\"3.0\">\r\n    <persistence-unit name=\"mariadb-pu\">\r\n        <properties>\r\n            <property name=\"jakarta.persistence.jdbc.driver\" value=\"org.mariadb.jdbc.Driver\" />\r\n\r\n            <property name=\"jakarta.persistence.jdbc.url\" value=\"jdbc:mariadb://localhost:3306/hieuthuocJPA\" />\r\n\r\n            <property name=\"jakarta.persistence.jdbc.user\" value=\"root\" />\r\n\r\n            <property name=\"jakarta.persistence.jdbc.password\" value=\"root\" />\r\n\r\n            <property name=\"jakarta.persistence.jdbc.dialect\" value=\"org.hibernate.dialect.MariaDBDialect\" />\r\n\r\n            <property name=\"hibernate.hbm2ddl.auto\" value=\"update\" />\r\n        </properties>\r\n\r\n    </persistence-unit>\r\n</persistence>\r\n
+===================================================================
+diff --git a/src/main/resources/META-INF/persistence.xml b/src/main/resources/META-INF/persistence.xml
+--- a/src/main/resources/META-INF/persistence.xml	
++++ b/src/main/resources/META-INF/persistence.xml	
+@@ -3,7 +3,24 @@
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+              version="3.0">
++
+     <persistence-unit name="mariadb-pu">
++        <class>entity.ChiTietHoaDon</class>
++        <class>entity.HoaDon</class>
++        <class>entity.NhaCungCap</class>
++        <class>entity.ChiTietPhieuNhapThuoc</class>
++        <class>entity.PhieuNhapThuoc</class>
++        <class>entity.VaiTro</class>
++        <class>entity.TaiKhoan</class>
++        <class>entity.DanhMuc</class>
++        <class>entity.NhaSanXuat</class>
++        <class>entity.KhuyenMai</class>
++        <class>entity.PhieuDatThuoc</class>
++        <class>entity.NhanVien</class>
++        <class>entity.KhachHang</class>
++        <class>entity.Thuoc</class>
++        <class>entity.ChiTietPhieuDatThuoc</class>
++
+         <properties>
+             <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+ 
