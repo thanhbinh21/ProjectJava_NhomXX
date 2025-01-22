@@ -21,8 +21,8 @@ public class HeloWorld {
         EntityManager em = Persistence.createEntityManagerFactory("mariadb-pu")
                 .createEntityManager();
 
-        Faker faker = new Faker();
-        EntityTransaction tr = em.getTransaction();
+//        Faker faker = new Faker();
+//        EntityTransaction tr = em.getTransaction();
 //        Random rd = new Random();
 //
 //
@@ -75,23 +75,23 @@ public class HeloWorld {
 //            em.persist(thuoc);//
 //            tr.commit();
 //        }
-        NhaSanXuatDAO testCRUD = new NhaSanXuatDAO(em);
+//        NhaSanXuatDAO testCRUD = new NhaSanXuatDAO(em);
         // Create
-        NhaSanXuat testCreate1 = new NhaSanXuat("12345","Test Create");
-        NhaSanXuat testCreate2 = new NhaSanXuat("12344","Test Detele");
-        testCRUD.save(testCreate1);
-        testCRUD.save(testCreate2);
-        // Detele
-        testCRUD.delete(testCreate2.getId());
-
-        //Update
-        testCreate1.setTen("Test Update");
-        testCRUD.update(testCreate1);
-        //Read
-        List<NhaSanXuat> list = testCRUD.getAll();
-        for (NhaSanXuat nhaSanXuat : list) {
-            System.out.print(nhaSanXuat);
-        }
+//        NhaSanXuat testCreate1 = new NhaSanXuat("12345","Test Create");
+//        NhaSanXuat testCreate2 = new NhaSanXuat("12344","Test Detele");
+//        testCRUD.save(testCreate1);
+//        testCRUD.save(testCreate2);
+//        // Detele
+//        testCRUD.delete(testCreate2.getId());
+//
+//        //Update
+//        testCreate1.setTen("Test Update");
+//        testCRUD.update(testCreate1);
+//        //Read
+//        List<NhaSanXuat> list = testCRUD.getAll();
+//        for (NhaSanXuat nhaSanXuat : list) {
+//            System.out.print(nhaSanXuat);
+//        }
 
 
 
