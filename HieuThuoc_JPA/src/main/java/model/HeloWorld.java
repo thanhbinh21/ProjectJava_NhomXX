@@ -23,8 +23,6 @@ public class HeloWorld {
         EntityTransaction tr = em.getTransaction();
         Random rd = new Random();
 
-
-
         for (int i = 0; i < 10; i++) {
             //them khuyenMai
             KhuyenMai khuyenMai = new KhuyenMai();
@@ -77,22 +75,7 @@ public class HeloWorld {
             em.persist(thuoc);
             tr.commit();
         }
-//        for(int i = 0; i < 10; i++) {
-//            Thuoc thuoc = new Thuoc();
-//            thuoc.setId(faker.regexify("T") + i);
-//            thuoc.setTen(faker.name().fullName());
-//            thuoc.setDonViTinh("Vỉ");
-//            thuoc.setThanhPhan(faker.dragonBall().character());
-//            thuoc.setSoLuongTon(rd.nextInt(100));
-//            try {
-//                thuoc.setHinhAnh(new FileInputStream("D:\\wp_appJAVA\\NhomXX_PTJava\\HieuThuoc_JPA\\product-image\\bai-trang-truong-phuc.jpg").readAllBytes());
-//            }catch (Exception e){
-//                e.printStackTrace();
-//            }
-//            tr.begin();
-//            em.persist(thuoc);
-//            tr.commit();
-//        }
+
         for (int i = 0; i < 10; i++) {
             KhachHang khachHang = new KhachHang();
             khachHang.setId(faker.number().digits(5));
