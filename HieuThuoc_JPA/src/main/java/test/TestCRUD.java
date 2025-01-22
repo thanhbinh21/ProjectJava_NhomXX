@@ -1,4 +1,4 @@
-package model;
+package test;
 
 import dao.NhaSanXuatDAO;
 import entity.*;
@@ -6,7 +6,6 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import net.datafaker.Faker;
-import org.checkerframework.checker.units.qual.N;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -15,7 +14,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
-public class HeloWorld {
+public class TestCRUD {
     public static void main(String[] args) {
         EntityManager em = Persistence.createEntityManagerFactory("mariadb-pu")
                 .createEntityManager();

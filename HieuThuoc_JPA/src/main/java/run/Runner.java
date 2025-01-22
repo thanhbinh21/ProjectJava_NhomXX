@@ -82,6 +82,7 @@ public class Runner {
             et.begin();
             em.persist(phieuDatThuoc);
             et.commit();
+            //
         }
     }
 }
