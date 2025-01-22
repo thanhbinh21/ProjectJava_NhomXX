@@ -1,5 +1,6 @@
 package entity;
 
+import dao.NhaSanXuatDAO;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,4 +26,12 @@ public class NhaSanXuat {
     @ToString.Exclude
     @OneToMany( mappedBy = "nhaSanXuat")
     private Set<Thuoc> thuoc;
+    public NhaSanXuat (){};
+    public NhaSanXuat (String id, String ten){
+        this.id = id;
+        this.ten = ten;
+    }
+    public NhaSanXuat (String id){
+        this.id = id;
+    }
 }

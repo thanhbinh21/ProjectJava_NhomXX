@@ -1,0 +1,16 @@
+Index: src/main/java/model/HeloWorld.java
+===================================================================
+diff --git a/src/main/java/model/HeloWorld.java b/src/main/java/model/HeloWorld.java
+deleted file mode 100644
+--- a/src/main/java/model/HeloWorld.java	
++++ /dev/null	
+@@ -1,9 +0,0 @@
+-package model;
+-
+-public class HeloWorld {
+-    public static void main(String[] args) {
+-        System.out.println("Hello World 1");
+-        System.out.println("Hello World 2");
+-
+-    }
+-}
