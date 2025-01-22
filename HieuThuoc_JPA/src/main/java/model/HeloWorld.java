@@ -233,7 +233,7 @@ public class HeloWorld {
             Thuoc thuoc = thuocList1.get(i);
             chiTietHoaDon.setThuoc(thuoc);
             int soLuongNhap = em.createQuery("select sum(n.soLuong) from ChiTietPhieuNhapThuoc n where n.thuoc.id = :n group by n.thuoc", Long.class).setParameter("n", thuoc.getId()).getSingleResult().intValue();
-            chiTietHoaDon.setSoLuong(soLuongNhap - thuoc.getSoLuongTon());
+            chiTietHoaDon.setSoLuong(soLuongNhap - thuoc.getSoLuongTon() * 2);
             if(thuoc.getChiTietHoaDons() == null) {
                 thuoc.setChiTietHoaDons(new HashSet<>());
             }
