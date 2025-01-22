@@ -47,6 +47,8 @@ public class Thuoc {
     @JoinColumn(name = "ma_khuyen_mai")
     private KhuyenMai khuyenMai;
 
+    @OneToMany(mappedBy = "thuoc", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<ChiTietHoaDon> chiTietHoaDons;
 
 //    @ToString.Exclude
 //    @ManyToOne
